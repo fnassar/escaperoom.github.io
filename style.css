@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.title {
+	background: black;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 2.5s ease;
+	opacity: 1;
+	z-index: 20;
+}
+
+.title h1{
+	font-size: 8em;
+	color: white;
+}
+
+.title p {
+	font-size: 1.2em;
+	color: white;
+}
+
+.title input {
+	font-size: 1.5em;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+.fade {
+	opacity: 0%;
+}
+
+.shelf {
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Flashlight Overlay */
+:root {
+	cursor: none;
+	--cursorX: 10vw;
+	--cursorY: 10vh;
+}
+:root:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	pointer-events: none;
+	background: radial-gradient(
+		circle 10vmax at var(--cursorX) var(--cursorY),
+		rgba(0,0,0,0) 0%,
+		rgba(0,0,0,.5) 80%,
+		rgba(0,0,0,.95) 100%
+	)
+}
