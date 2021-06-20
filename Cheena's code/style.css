@@ -122,6 +122,7 @@ body {
 }
 
 .box{
+	background-color: none;
 	text-align: center;
 	height: 6vh;
 }
