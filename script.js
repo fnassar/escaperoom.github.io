@@ -54,7 +54,7 @@ function update(e){
 	}
 
 }
-
+let flash = document.getElementById('flash');
 let check = 0;
 let numofclicks = 0;
 function blink() {
@@ -63,14 +63,16 @@ function blink() {
 	if (check == 0) {
 		style.opacity = "1";
 		check = 1;
+		flash.load();
+		flash.play();
 	}
 	else { 
 		style.opacity = "5%";
 		check = 0;
+		flash.load();
+		flash.play();
 	}
 }
-
-
 
 
 
